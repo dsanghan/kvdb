@@ -45,8 +45,11 @@
         AssertDB();
         obj = _cache[key];
         if (!obj) {
-            obj = [[NSString alloc] initWithData:[_db dataForKey:key] encoding:NSUTF8StringEncoding];
-            _cache[key] = obj;
+            NSData *data = [_db dataForKey:key];
+            if (data) {
+                obj = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                _cache[key] = obj;
+            }
         }
     });
     return obj;
@@ -56,6 +59,7 @@
     dispatch_async(self.syncQueue, ^{
         AssertDB();
         [_db setData:[obj dataUsingEncoding:NSUTF8StringEncoding] forKey:aKey];
+        NSLog(@"Wrote key: %@", aKey);
         _cache[aKey] = obj;
     });
 }
