@@ -55,6 +55,8 @@
 		C6B7F66E1AC66E0C00444CFB /* KVOrderedDatabase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB1046A1ABE82D900FD6FF6 /* KVOrderedDatabase.h */; };
 		C6B7F66F1AC66E1100444CFB /* sfts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD520F381ABB548D00681B8B /* sfts.h */; };
 		C6B7F6701AC66E1500444CFB /* kvdbo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD1E7C831AAA47DD0030673D /* kvdbo.h */; };
+		D76EFE6A1D533D7300A60FDA /* KVDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EFE691D533D7300A60FDA /* KVDatabaseQueue.m */; };
+		D76EFE6C1D533D7300A60FDA /* KVDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EFE691D533D7300A60FDA /* KVDatabaseQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -146,6 +148,8 @@
 		C66823811763C48F000C603C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C668238D1763EA47000C603C /* libkvdb-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkvdb-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C668238F1763EA47000C603C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D76EFE681D533D7300A60FDA /* KVDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVDatabaseQueue.h; sourceTree = "<group>"; };
+		D76EFE691D533D7300A60FDA /* KVDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVDatabaseQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 				BDB104681ABE82CB00FD6FF6 /* KVDatabase.m */,
 				BDB1046A1ABE82D900FD6FF6 /* KVOrderedDatabase.h */,
 				BDB1046B1ABE82D900FD6FF6 /* KVOrderedDatabase.m */,
+				D76EFE681D533D7300A60FDA /* KVDatabaseQueue.h */,
+				D76EFE691D533D7300A60FDA /* KVDatabaseQueue.m */,
 			);
 			name = objc;
 			path = ../objc;
@@ -381,6 +387,7 @@
 				BDB104861AC4D55E00FD6FF6 /* lz4hc.c in Sources */,
 				BD520F3C1ABB548D00681B8B /* sfts.cpp in Sources */,
 				C66823761763C472000C603C /* kvtable.c in Sources */,
+				D76EFE6A1D533D7300A60FDA /* KVDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +420,7 @@
 				C698FAF41AC66D4500501892 /* lz4frame.c in Sources */,
 				C698FAF51AC66D4D00501892 /* lz4hc.c in Sources */,
 				C698FAF61AC66D5100501892 /* xxhash.c in Sources */,
+				D76EFE6C1D533D7300A60FDA /* KVDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
