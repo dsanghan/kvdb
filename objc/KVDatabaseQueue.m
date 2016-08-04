@@ -29,6 +29,7 @@
 
 - (instancetype)initDatabaseQueueWithPath:(NSString *)path {
     if (self = [super init]) {
+        // TODO: Might be better to use a CONCURRENT queue with dispatch_barrier_asyncs
         _syncQueue = dispatch_queue_create("com.kvdb.sync", DISPATCH_QUEUE_SERIAL);
 
         _cache     = [[NSCache alloc] init];
@@ -42,16 +43,16 @@
     return self;
 }
 
-- (NSString *)objectForKey:(NSString *)key {
+- (NSString *)objectForKey:(NSString *)aKey {
     __block NSString *obj = nil;
     dispatch_sync(self.syncQueue, ^{
         AssertDB();
-        obj = [_cache objectForKey:key];
+        obj = [_cache objectForKey:aKey];
         if (!obj) {
-            NSData *data = [_db dataForKey:key];
+            NSData *data = [_db dataForKey:aKey];
             if (data) {
                 obj = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                [_cache setObject:obj forKey:key];
+                [_cache setObject:obj forKey:aKey];
             }
         }
     });
@@ -63,6 +64,15 @@
         AssertDB();
         [_db setData:[obj dataUsingEncoding:NSUTF8StringEncoding] forKey:aKey];
         [_cache setObject:obj forKey:aKey];
+    });
+}
+
+- (void)removeObjectForKey:(NSString *)aKey {
+    // Using sync to flush the cache of the key
+    dispatch_sync(self.syncQueue, ^{
+        AssertDB();
+        [_db removeDataForKey:aKey];
+        [_cache removeObjectForKey:aKey];
     });
 }
 

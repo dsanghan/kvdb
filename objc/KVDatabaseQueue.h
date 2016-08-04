@@ -12,8 +12,9 @@
 
 - (instancetype)initDatabaseQueueWithPath:(NSString *)path;
 
-- (NSString *)objectForKey:(NSString *)key;
+- (NSString *)objectForKey:(NSString *)aKey;
 - (void)setObject:(NSString *)obj forKey:(NSString *)aKey;
+- (void)removeObjectForKey:(NSString *)aKey;
 
 - (void)purgeCache;
 
