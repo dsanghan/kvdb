@@ -15,4 +15,8 @@
 - (NSString *)objectForKey:(NSString *)key;
 - (void)setObject:(NSString *)obj forKey:(NSString *)aKey;
 
+- (void)purgeCache;
+
+- (void)close;
+
 @end
