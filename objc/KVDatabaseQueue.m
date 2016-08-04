@@ -32,7 +32,9 @@
         _cache     = [[NSMutableDictionary alloc] init];
         _syncQueue = dispatch_queue_create("com.kvdb.sync", DISPATCH_QUEUE_SERIAL);
         _db = [[KVDatabase alloc] initWithPath:path];
-        [_db open];
+        if (![_db open]) {
+            NSLog(@"Failed to open database with path: %@", path);
+        }
     }
     return self;
 }
@@ -40,7 +42,7 @@
 - (NSString *)objectForKey:(NSString *)key {
     __block NSString *obj = nil;
     dispatch_sync(self.syncQueue, ^{
-        AssertDB()
+        AssertDB();
         obj = _cache[key];
         if (!obj) {
             obj = [[NSString alloc] initWithData:[_db dataForKey:key] encoding:NSUTF8StringEncoding];
@@ -52,9 +54,9 @@
 
 - (void)setObject:(NSString *)obj forKey:(NSString *)aKey {
     dispatch_async(self.syncQueue, ^{
-        AssertDB()
+        AssertDB();
         [_db setData:[obj dataUsingEncoding:NSUTF8StringEncoding] forKey:aKey];
-        _cache[key] = obj;
+        _cache[aKey] = obj;
     });
 }
 
