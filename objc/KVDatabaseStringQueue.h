@@ -1,5 +1,5 @@
 //
-//  KVDatabaseQueue.h
+//  KVDatabaseStringQueue.h
 //  kvdb
 //
 //  Created by Dev Sanghani on 04/08/16.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KVDatabaseQueue : NSObject
+@interface KVDatabaseStringQueue : NSObject
 
 - (instancetype)initDatabaseQueueWithPath:(NSString *)path;
 

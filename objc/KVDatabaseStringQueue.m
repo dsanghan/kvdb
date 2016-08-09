@@ -6,7 +6,7 @@
 //  Copyright © 2016 etpan. All rights reserved.
 //
 
-#import "KVDatabaseQueue.h"
+#import "KVDatabaseStringQueue.h"
 
 #import "KVDatabase.h"
 
@@ -16,7 +16,7 @@
 #define AssertDB()
 #endif
 
-@interface KVDatabaseQueue ()
+@interface KVDatabaseStringQueue ()
 
 @property (nonatomic, readwrite, strong) dispatch_queue_t syncQueue;
 
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation KVDatabaseQueue
+@implementation KVDatabaseStringQueue
 
 - (instancetype)initDatabaseQueueWithPath:(NSString *)path {
     if (self = [super init]) {
