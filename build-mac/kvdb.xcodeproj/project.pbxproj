@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BD1E7C841AAA47DD0030673D /* kvdbo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD1E7C821AAA47DD0030673D /* kvdbo.cpp */; };
-		BD520F301ABAB24E00681B8B /* kvdbo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD1E7C831AAA47DD0030673D /* kvdbo.h */; };
 		BD520F391ABB548D00681B8B /* ConvertUTF.c in Sources */ = {isa = PBXBuildFile; fileRef = BD520F311ABB548D00681B8B /* ConvertUTF.c */; };
 		BD520F3A1ABB548D00681B8B /* kvserialization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD520F331ABB548D00681B8B /* kvserialization.cpp */; };
 		BD520F3B1ABB548D00681B8B /* kvunicode.c in Sources */ = {isa = PBXBuildFile; fileRef = BD520F351ABB548D00681B8B /* kvunicode.c */; };
@@ -21,7 +20,6 @@
 		BDB104861AC4D55E00FD6FF6 /* lz4hc.c in Sources */ = {isa = PBXBuildFile; fileRef = BDB1047E1AC4D55E00FD6FF6 /* lz4hc.c */; };
 		BDB104891AC4D55E00FD6FF6 /* xxhash.c in Sources */ = {isa = PBXBuildFile; fileRef = BDB104821AC4D55E00FD6FF6 /* xxhash.c */; };
 		C618377C1763F6B8009E00E4 /* kvdb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C66823611763C472000C603C /* kvdb.h */; };
-		C618377F1763F6CC009E00E4 /* kvdb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C66823611763C472000C603C /* kvdb.h */; };
 		C668236A1763C472000C603C /* kvassert.c in Sources */ = {isa = PBXBuildFile; fileRef = C668235B1763C472000C603C /* kvassert.c */; };
 		C668236C1763C472000C603C /* kvblock.c in Sources */ = {isa = PBXBuildFile; fileRef = C668235D1763C472000C603C /* kvblock.c */; };
 		C668236F1763C472000C603C /* kvdb.c in Sources */ = {isa = PBXBuildFile; fileRef = C66823601763C472000C603C /* kvdb.c */; };
@@ -46,10 +44,6 @@
 		C698FAF91AC66D6A00501892 /* kvunicode.c in Sources */ = {isa = PBXBuildFile; fileRef = BD520F351ABB548D00681B8B /* kvunicode.c */; };
 		C698FAFA1AC66D6D00501892 /* sfts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD520F371ABB548D00681B8B /* sfts.cpp */; };
 		C698FAFB1AC66D7200501892 /* kvdbo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD1E7C821AAA47DD0030673D /* kvdbo.cpp */; };
-		C6B7F6671AC66DD700444CFB /* sfts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD520F381ABB548D00681B8B /* sfts.h */; };
-		C6B7F6681AC66DDF00444CFB /* KVIndexer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB104601ABE82B000FD6FF6 /* KVIndexer.h */; };
-		C6B7F66A1AC66DE900444CFB /* KVOrderedDatabase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB1046A1ABE82D900FD6FF6 /* KVOrderedDatabase.h */; };
-		C6B7F66B1AC66DEF00444CFB /* KVDatabase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB104671ABE82CB00FD6FF6 /* KVDatabase.h */; };
 		C6B7F66C1AC66E0700444CFB /* KVIndexer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB104601ABE82B000FD6FF6 /* KVIndexer.h */; };
 		C6B7F66D1AC66E0900444CFB /* KVDatabase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB104671ABE82CB00FD6FF6 /* KVDatabase.h */; };
 		C6B7F66E1AC66E0C00444CFB /* KVOrderedDatabase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB1046A1ABE82D900FD6FF6 /* KVOrderedDatabase.h */; };
@@ -57,6 +51,14 @@
 		C6B7F6701AC66E1500444CFB /* kvdbo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD1E7C831AAA47DD0030673D /* kvdbo.h */; };
 		D76EFE6A1D533D7300A60FDA /* KVDatabaseStringQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EFE691D533D7300A60FDA /* KVDatabaseStringQueue.m */; };
 		D76EFE6C1D533D7300A60FDA /* KVDatabaseStringQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EFE691D533D7300A60FDA /* KVDatabaseStringQueue.m */; };
+		FC241E991D648B8500E0A475 /* KVIndexer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB104601ABE82B000FD6FF6 /* KVIndexer.h */; };
+		FC241E9A1D648B8500E0A475 /* KVDatabase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB104671ABE82CB00FD6FF6 /* KVDatabase.h */; };
+		FC241E9B1D648B8500E0A475 /* KVOrderedDatabase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDB1046A1ABE82D900FD6FF6 /* KVOrderedDatabase.h */; };
+		FC241E9C1D648B8500E0A475 /* KVDatabaseStringQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D76EFE681D533D7300A60FDA /* KVDatabaseStringQueue.h */; };
+		FC241E9D1D648B8500E0A475 /* KVDatabaseDataQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCE5651E1D5A15B800DC444D /* KVDatabaseDataQueue.h */; };
+		FC241E9E1D648B9900E0A475 /* sfts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD520F381ABB548D00681B8B /* sfts.h */; };
+		FC241E9F1D648B9900E0A475 /* kvdbo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD1E7C831AAA47DD0030673D /* kvdbo.h */; };
+		FC241EA01D648B9900E0A475 /* kvdb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C66823611763C472000C603C /* kvdb.h */; };
 		FCE565201D5A15B800DC444D /* KVDatabaseDataQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5651F1D5A15B800DC444D /* KVDatabaseDataQueue.m */; };
 		FCE565211D5A15B800DC444D /* KVDatabaseDataQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5651F1D5A15B800DC444D /* KVDatabaseDataQueue.m */; };
 /* End PBXBuildFile section */
@@ -77,21 +79,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C618377E1763F6C3009E00E4 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = include/kvdb;
-			dstSubfolderSpec = 16;
-			files = (
-				C618377F1763F6CC009E00E4 /* kvdb.h in CopyFiles */,
-				BD520F301ABAB24E00681B8B /* kvdbo.h in CopyFiles */,
-				C6B7F6671AC66DD700444CFB /* sfts.h in CopyFiles */,
-				C6B7F6681AC66DDF00444CFB /* KVIndexer.h in CopyFiles */,
-				C6B7F66A1AC66DE900444CFB /* KVOrderedDatabase.h in CopyFiles */,
-				C6B7F66B1AC66DEF00444CFB /* KVDatabase.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C668237D1763C48F000C603C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +87,23 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		FC241E981D648B6700E0A475 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/kvdb;
+			dstSubfolderSpec = 16;
+			files = (
+				FC241E9E1D648B9900E0A475 /* sfts.h in CopyFiles */,
+				FC241E9F1D648B9900E0A475 /* kvdbo.h in CopyFiles */,
+				FC241EA01D648B9900E0A475 /* kvdb.h in CopyFiles */,
+				FC241E991D648B8500E0A475 /* KVIndexer.h in CopyFiles */,
+				FC241E9A1D648B8500E0A475 /* KVDatabase.h in CopyFiles */,
+				FC241E9B1D648B8500E0A475 /* KVOrderedDatabase.h in CopyFiles */,
+				FC241E9C1D648B8500E0A475 /* KVDatabaseStringQueue.h in CopyFiles */,
+				FC241E9D1D648B8500E0A475 /* KVDatabaseDataQueue.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -296,9 +300,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C66823571763C246000C603C /* Build configuration list for PBXNativeTarget "kvdb" */;
 			buildPhases = (
-				C618377E1763F6C3009E00E4 /* CopyFiles */,
 				C668234F1763C246000C603C /* Sources */,
 				C66823501763C246000C603C /* Frameworks */,
+				FC241E981D648B6700E0A475 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -447,6 +451,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -467,6 +472,7 @@
 					"$(SRCROOT)/../third-party/lz4/lib",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 			};
 			name = Debug;
 		};
@@ -482,6 +488,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -495,6 +502,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../third-party/lz4/lib",
 				);
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 			};
 			name = Release;
 		};
@@ -508,6 +516,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -521,6 +530,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
