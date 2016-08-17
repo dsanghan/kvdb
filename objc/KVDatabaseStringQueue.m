@@ -44,6 +44,7 @@
 }
 
 - (NSString *)objectForKey:(NSString *)aKey {
+    if (!aKey) { return nil; };
     __block NSString *obj = nil;
     dispatch_sync(self.syncQueue, ^{
         AssertDB();
@@ -60,6 +61,7 @@
 }
 
 - (void)setObject:(NSString *)obj forKey:(NSString *)aKey {
+    if (!aKey || !obj) { return; };
     dispatch_async(self.syncQueue, ^{
         AssertDB();
         [_db setData:[obj dataUsingEncoding:NSUTF8StringEncoding] forKey:aKey];
@@ -68,6 +70,7 @@
 }
 
 - (void)removeObjectForKey:(NSString *)aKey {
+    if (!aKey) { return; };
     // Using sync to flush the cache of the key
     dispatch_sync(self.syncQueue, ^{
         AssertDB();
